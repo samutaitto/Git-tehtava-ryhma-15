@@ -7,6 +7,7 @@ public class App {
        a1.kiihdyta();
        a1.jarruta();
        a1.pysahtyy();
+       a1.toottaa();
 
        a2.naytaTiedot();
        a2.jarruta();
@@ -53,6 +54,10 @@ class Auto {
     public void kiihdyta() {
         System.out.println("Auto kiihtyy");
         
+    }
+
+    public void toottaa() {
+        System.out.println("Auto toottaa");
     }
 
     public void naytaTiedot() {
