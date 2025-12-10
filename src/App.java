@@ -10,6 +10,7 @@ public class App {
        a1.toottaa();
 
        a2.naytaTiedot();
+       a2.kaynnistyy();
        a2.jarruta();
        a2.pysahtyy();
        a2.kiihdyta();
@@ -64,5 +65,9 @@ class Auto {
         System.out.println("Merkki: " + merkki);
         System.out.println("Malli: " + malli);
         System.out.println("Bensan määrä: " + bensanMaara + "l");
+    }
+
+     public void kaynnistyy() {
+        System.out.println("Auto kaynnistyy");
     }
 }
