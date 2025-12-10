@@ -1,11 +1,18 @@
 public class App {
     public static void main(String[] args) throws Exception {
         Auto a1 = new Auto();
-        
+        Auto a2 = new Auto();
+
        a1.naytaTiedot();
        a1.kiihdyta();
        a1.jarruta();
        a1.pysahtyy();
+
+       a2.naytaTiedot();
+       a2.jarruta();
+       a2.pysahtyy();
+       a2.kiihdyta();
+       a2.naytaTiedot();
 
         
     }
