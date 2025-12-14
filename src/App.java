@@ -10,11 +10,17 @@ public class App {
        a1.toottaa();
 
        a2.naytaTiedot();
+       a2.lukitse();
+       a2.kaynnistyy();
+       a2.avaa();
        a2.kaynnistyy();
        a2.jarruta();
        a2.pysahtyy();
        a2.kiihdyta();
        a2.naytaTiedot();
+       
+
+
 
         
     }
@@ -26,6 +32,7 @@ class Auto {
     int bensanMaara;
     String merkki;
     String malli;
+    boolean lukittu;
 
     // Muodostimet
     
@@ -34,6 +41,7 @@ class Auto {
         merkki = "";
         malli = "";
         bensanMaara = 10;  
+        lukittu = false;
     }
 
     // Täysparametrinen muodostin
@@ -41,7 +49,28 @@ class Auto {
         merkki = m;
         malli = v;
         bensanMaara = l; 
+        lukittu = false;
     } 
+
+    public void lukitse(){
+        lukittu = true;
+        System.out.println("Auto lukittu.");
+        
+    }
+    public void avaa( ){
+        lukittu = false;
+        System.out.println("Auto avattu.");
+    }
+    public void kaynnistyy() {
+        if (lukittu) {
+            System.out.println("Auto on lukossa. Ei voi käynnistää.");
+            return;
+        }
+        System.out.println("Auto käynnistyy");
+
+    }
+
+    
 
     public void jarruta() {
         System.out.println("Auto jarruttaa");
@@ -65,9 +94,9 @@ class Auto {
         System.out.println("Merkki: " + merkki);
         System.out.println("Malli: " + malli);
         System.out.println("Bensan määrä: " + bensanMaara + "l");
+        System.out.println("Lukittu: " + (lukittu ? "Kyllä" : "Ei"));
     }
 
-     public void kaynnistyy() {
-        System.out.println("Auto kaynnistyy");
-    }
 }
+
+
